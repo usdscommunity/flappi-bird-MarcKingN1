@@ -1,13 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cn8woptakkoeb"]
+[gd_scene load_steps=6 format=3 uid="uid://cn8woptakkoeb"]
 
 [ext_resource type="Script" uid="uid://bysk8mq72a3rr" path="res://Scenes/game_over.gd" id="1_8fo1c"]
 [ext_resource type="Texture2D" uid="uid://c57fej47adq38" path="res://assets/restart.png" id="1_ojehl"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ek8ke"]
-texture = ExtResource("1_ojehl")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoghk"]
-texture = ExtResource("1_ojehl")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_14u15"]
 texture = ExtResource("1_ojehl")
@@ -26,8 +20,6 @@ offset_left = 342.0
 offset_top = 350.0
 offset_right = 502.0
 offset_bottom = 413.0
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_ek8ke")
-theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_eoghk")
 theme_override_styles/hover = SubResource("StyleBoxTexture_14u15")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_j3ryr")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8fo1c")

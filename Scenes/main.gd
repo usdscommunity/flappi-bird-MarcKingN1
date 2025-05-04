@@ -27,6 +27,7 @@ func new_game():
 	scroll = 0
 	$ScoreLabel.text = "SCORE : " + str(score)
 	$GameOver.hide()
+	get_tree().call_group("pipes", "queue_free")
 	pipes.clear()
 	generate_pipes()
 	$Bird.reset()
@@ -105,4 +106,4 @@ func _on_sol_hit() -> void:
 
 
 func _on_game_over_restart() -> void:
-	_ready()
+	new_game()

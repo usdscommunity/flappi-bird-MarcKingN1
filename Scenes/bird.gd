@@ -19,6 +19,7 @@ func reset():
 func _physics_process(delta: float) -> void:
 	if flying or falling:
 		velocity.y += GRAVITY * delta
+		#velocité max
 		if velocity.y > MAX_VEL:
 			velocity.y = MAX_VEL
 		if flying:

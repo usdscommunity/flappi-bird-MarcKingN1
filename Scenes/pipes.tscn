@@ -19,7 +19,7 @@ size = Vector2(72, 524)
 a = Vector2(40, -100)
 b = Vector2(40, 99)
 
-[node name="Pipe" type="Area2D"]
+[node name="Pipe" type="Area2D" groups=["pipes"]]
 script = ExtResource("1_7ktcp")
 
 [node name="lower" type="Sprite2D" parent="."]
