@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://30ft5ipnpjpg"]
+
+[ext_resource type="Script" uid="uid://bc378b8sp5pqc" path="res://Scenes/main.gd" id="1_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://d38ceuoo614k4" path="res://assets/bg.png" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://btf2ryu3xdevh" path="res://Scenes/pipes.tscn" id="2_kry3j"]
+[ext_resource type="PackedScene" uid="uid://cgsr4aya2iad8" path="res://Scenes/bird.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://3xi2wb1xj0sm" path="res://Scenes/sol.tscn" id="4_jjvhh"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_bo1nx")
+pipe_scene = ExtResource("2_kry3j")
+
+[node name="Arriere_plan" type="Sprite2D" parent="."]
+texture = ExtResource("1_jjgbg")
+offset = Vector2(432, 384)
+
+[node name="Tuyau_Timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Bird" parent="." instance=ExtResource("3_8gbba")]
+
+[node name="Sol" parent="." instance=ExtResource("4_jjvhh")]
+
+[node name="Tuyaux" parent="." instance=ExtResource("2_kry3j")]
+
+[connection signal="timeout" from="Tuyau_Timer" to="." method="_on_tuyau_timer_timeout"]
